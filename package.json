@@ -1,0 +1,43 @@
+{
+  "name": "node-express-sample",
+  "version": "1.0.0",
+  "description": "Sample Express.js application for purpose of building a REST API",
+  "scripts": {
+    "precommit": "npm run lint-staged",
+    "lint": "eslint --ext .js src mock tests && npm run lint:style",
+    "lint:fix": "eslint --fix --ext .js src mock tests && npm run lint:style",
+    "lint-staged": "lint-staged",
+    "lint-staged:js": "eslint --ext .js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/jeffandersen/node-express-sample.git"
+  },
+  "author": "Jeff Andersen <@jeffandersen>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeffandersen/node-express-sample/issues"
+  },
+  "homepage": "https://github.com/jeffandersen/node-express-sample",
+  "dependencies": {
+    "child_process": "1.0.2",
+    "express": "4.17.1",
+    "tracer": "0.9.8"
+  },
+  "devDependencies": {
+    "babel-eslint": "8.2.5",
+    "eslint": "4.19.1",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-plugin-babel": "4.1.2",
+    "eslint-plugin-compat": "2.4.0",
+    "eslint-plugin-import": "2.13.0",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "eslint-plugin-react": "7.10.0",
+    "husky": "0.14.3",
+    "lint-staged": "6.1.1"
+  },
+  "lint-staged": {
+    "**/*.js": "lint-staged:js"
+  }
+}
