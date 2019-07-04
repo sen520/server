@@ -5,6 +5,10 @@ const { wait, getLogger } = require('./utility');
 
 const app = express();
 
+app.get('/', (req, res) => {
+  res.send('the server is starting');
+});
+
 app.get('/:id', (req, res) => {
   // 执行脚本
   const { id } = req.params;
