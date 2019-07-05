@@ -33,3 +33,13 @@ file:
         DB_PASS='' # mongo user password
         DAYS=7 # Keep the file for 7 days 
         ```
+
+- docker_container 
+    
+    - create docker container and Scheduled backup mongo(00:00 on every Friday)
+    
+    - do like this
+    ```
+        docker build -t cron-in-docker . # create docker images and contain
+        docker run --rm -it cron-in-docker # Explicitly run the container to observe the results
+    ```
