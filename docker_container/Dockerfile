@@ -1,10 +1,8 @@
-FROM ubuntu:14.04
+FROM ubuntu:18.04
 
 ENV DEBIAN_FRONTEND noninteractive
  
-#安装python, 这步可以省略，或添加其他依赖
 RUN apt-get update
-RUN apt-get install -y mongodb
 
 #创建脚本路径
 RUN mkdir /code
@@ -12,6 +10,10 @@ WORKDIR /code
 
 #复制要运行的代码到镜像中，包括cron配置文件
 ADD . /code
+
+RUN apt-get install mongodb -y
+RUN apt-get install cron
+RUN service cron start
 
 #设置cron脚本
 RUN crontab /code/crontabfile
