@@ -1,3 +1,4 @@
+#! /bin/bash
 rsyslogd
 cron
 touch /var/log/cron.log
