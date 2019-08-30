@@ -1,0 +1,22 @@
+version: '2'
+services:
+  rs1:
+    image: mongo:4.0
+    volumes:
+      - /data/mongodbtest/replset/rs1:/data/db
+    command: mongod --dbpath /data/db --replSet myset
+    ports:
+     - "27017:27017"
+    expose:
+     - "27017"
+
+  rs2:
+    image: mongo:4.0
+    volumes:
+      - /data/mongodbtest/replset/rs2:/data/db
+    command: mongod --dbpath /data/db --replSet myset
+  rs3:
+    image: mongo:4.0
+    volumes:
+      - /data/mongodbtest/replset/rs3:/data/db
+    command: mongod --dbpath /data/db --replSet myset
