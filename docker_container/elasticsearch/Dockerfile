@@ -8,4 +8,4 @@ RUN echo '{"mainAddress": "192.168.1.2:27018","continueOnError": true,"fields": 
 RUN apt install python3 -y \
     && apt install python3-pip -y \
          && pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple 'mongo-connector[elastic5]' && pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple 'elastic2-doc-manager'
-CMD mongo-connector -c config
+CMD mongo-connector -c /root/data/config
