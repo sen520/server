@@ -1,3 +1,6 @@
+设置登录密码需要配置keyfile， 
+
+```
 version: '2'
 services:
   db0:
@@ -42,3 +45,9 @@ services:
       - "27020:27017"
     command: mongod --replSet rs0 --auth --keyFile /data/common/mongodb-keyfile
     
+
+```
+
+mongodb-keyfile
+
+配置过登录密码后，通过`openssl rand -base64 725  > /home/mongodb.key`生成，每个主机都要相同
