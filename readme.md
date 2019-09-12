@@ -43,3 +43,10 @@ file:
         docker build -t cron-in-docker . # create docker images and contain
         docker run --rm -it cron-in-docker # Explicitly run the container to observe the results
     ```
+
+- ./scripts/kill_mongo_timeout.js
+    
+  - kill some timeout mongoshell 
+      - `secs_runningsecs_running` time about running
+      - `if`  weather ip is equal to xx or not
+  
