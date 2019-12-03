@@ -1,28 +1,32 @@
 #### readme
 
+这个服务用于执行linux脚本信息，同时实时在控制台显示结果，该服务可以动态加载新添加的脚本信息，但此脚本信息需要在config.json注册
+
 the server is used to execute the linux bash and it can Print results can be displayed in real time
+
+这个服务如果运行在ubuntu等服务器上，记得要打开相应端口号的防火墙，并且，如果通过ssh连接、执行，需要运行下面命令来保证server在断开ssh时不被杀掉`nohup node /root/project/server/app.js &`
 
 If the service is running in Ubuntu, remember to turn off the firewall on the response port. Also, when executing commands with SSH, you need to execute `nohup node /root/project/server/app.js &`
 
-- `npm i` to configure the environment
+- `npm i` to configure the environment  安装环境
 
-- `npm start` to start the server
+- `npm start` to start the server  启动服务
 
-- `curl http://localhost:port` can test case
+- `curl http://localhost:port` can test case  测试服务
 
 file:
 
 - app.js  main file of the server
 
-- config.json  the key is the id of file, value is the bash filename
+- config.json  the key is the id of file, value is the bash filename  键为脚本id，值为脚本名称
 
 - utility.js some tools we can use
 
 - scripts bash shell script
   
-    - hello-world  test script
+    - hello-world  test script  测试
     
-    - mongodump  mongo data Backup
+    - mongodump  mongo data Backup   Mongodb数据库备份
       
         ```
         DB_HOST='' # mongo host
