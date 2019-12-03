@@ -2,6 +2,8 @@
 
 the server is used to execute the linux bash and it can Print results can be displayed in real time
 
+If the service is running in Ubuntu, remember to turn off the firewall on the response port. Also, when executing commands with SSH, you need to execute `nohup node /root/project/server/app.js &`
+
 - `npm i` to configure the environment
 
 - `npm start` to start the server
@@ -17,11 +19,11 @@ file:
 - utility.js some tools we can use
 
 - scripts bash shell script
-    
+  
     - hello-world  test script
     
     - mongodump  mongo data Backup
-        
+      
         ```
         DB_HOST='' # mongo host
         DB_NAME='' # mongo database
@@ -35,7 +37,7 @@ file:
         ```
 
 - docker_container 
-    
+  
     - create docker container and Scheduled backup mongo(00:00 on every Friday)
     
     - do like this
@@ -45,7 +47,7 @@ file:
     ```
 
 - ./scripts/kill_mongo_timeout.js
-    
+  
   - kill some timeout mongoshell 
       - `secs_runningsecs_running` time about running
       - `if`  weather ip is equal to xx or not
