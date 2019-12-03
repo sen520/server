@@ -8,6 +8,10 @@ the server is used to execute the linux bash and it can Print results can be dis
 
 If the service is running in Ubuntu, remember to turn off the firewall on the response port. Also, when executing commands with SSH, you need to execute `nohup node /root/project/server/app.js &`
 
+**注意**：在`app.js`的47行`spawn('sh', [./scripts/${filePath}])`，你应该修改为绝对路径
+
+**Be careful**: You should change the path to absolute path in `app.js` line 47 `spawn('sh', [./scripts/${filePath}])`
+
 - `npm i` to configure the environment  安装环境
 
 - `npm start` to start the server  启动服务
