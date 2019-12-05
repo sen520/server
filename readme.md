@@ -5,8 +5,10 @@
 the server is used to execute the linux bash and it can Print results can be displayed in real time
 
 这个服务如果运行在ubuntu等服务器上，记得要打开相应端口号的防火墙，并且，如果通过ssh连接、执行，需要运行下面命令来保证server在断开ssh时不被杀掉`nohup node /root/project/server/app.js &`
+开通防火墙响应端口可以[点此](https://blog.csdn.net/hqbootstrap1/article/details/94123307)查看
 
 If the service is running in Ubuntu, remember to turn off the firewall on the response port. Also, when executing commands with SSH, you need to execute `nohup node /root/project/server/app.js &`
+You can [click here](https://blog.csdn.net/hqbootstrap1/article/details/94123307) to activate the firewall response port. 
 
 **注意**：在`app.js`的47行`spawn('sh', [./scripts/${filePath}])`，你应该修改为绝对路径
 
@@ -59,4 +61,3 @@ file:
   - kill some timeout mongoshell 
       - `secs_runningsecs_running` time about running
       - `if`  weather ip is equal to xx or not
-  
