@@ -22,7 +22,7 @@
   "homepage": "https://github.com/jeffandersen/node-express-sample",
   "dependencies": {
     "child_process": "1.0.2",
-    "express": "4.17.1",
+    "express": "4.20.0",
     "tracer": "0.9.8"
   },
   "devDependencies": {
